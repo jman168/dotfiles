@@ -48,7 +48,7 @@ return {
 		require("lspconfig").pyright.setup {}
 		require("lspconfig").clangd.setup {}
 		require("lspconfig").html.setup {}
-		require("lspconfig").tsserver.setup {}
+		require("lspconfig").ts_ls.setup {}
 
 		local cmp = require("cmp");
 		local luasnip = require("luasnip");
