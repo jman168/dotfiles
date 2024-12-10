@@ -13,4 +13,3 @@ vim.opt.rtp:prepend(lazypath)
 
 require("config")
 require("lazy").setup("plugins")
-require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "~/.config/nvim/snippets" } })
