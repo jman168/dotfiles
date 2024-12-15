@@ -41,6 +41,7 @@ return {
 					},
 					cargo = {
 						allFeatures = true,
+						targetDir = true,
 					},
 				}
 			}
