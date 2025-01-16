@@ -11,3 +11,6 @@ ln -s "$DOTFILES_LOCATION/alacritty" ~/.config/alacritty
 # Neovim
 rm ~/.config/nvim
 ln -s "$DOTFILES_LOCATION/nvim" ~/.config/nvim
+
+rm ~/.config/lazygit
+ln -s "$DOTFILES_LOCATION/lazygit" ~/.config/lazygit
