@@ -40,7 +40,6 @@ return {
 						enable = false,
 					},
 					cargo = {
-						allFeatures = true,
 						targetDir = true,
 					},
 				}
