@@ -8,6 +8,7 @@ return {
 		openai = {
 			endpoint = "https://api.deepseek.com/v1",
 			model = "deepseek-chat",
+			max_tokens = 4096,
 		}
 	-- add any opts here
 	},
