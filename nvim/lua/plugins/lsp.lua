@@ -29,6 +29,7 @@ return {
 				"pyright",
 				"clangd",
 				"html",
+				"jdtls",
 			}
 		}
 
@@ -49,6 +50,14 @@ return {
 		require("lspconfig").clangd.setup {}
 		require("lspconfig").html.setup {}
 		require("lspconfig").ts_ls.setup {}
+		require("lspconfig").jdtls.setup {}
+		vim.lsp.enable("kotlin_language_server")
+		vim.lsp.config("kotlin_language_server", {
+			cmd = { 'kotlin-language-server' },
+			cmd_env = {
+				JAVA_HOME = '/usr/lib/jvm/java-11-openjdk',
+			},
+		})
 
 		local cmp = require("cmp");
 		local luasnip = require("luasnip");
