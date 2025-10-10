@@ -33,8 +33,8 @@ return {
 			}
 		}
 
-		require("lspconfig").lua_ls.setup {}
-		require("lspconfig").rust_analyzer.setup {
+		vim.lsp.enable("lua_ls")
+		vim.lsp.config("rust_analyzer", {
 			settings = {
 				['rust-analyzer'] = {
 					diagnostics = {
@@ -45,19 +45,20 @@ return {
 					},
 				}
 			}
-		}
-		require("lspconfig").pyright.setup {}
-		require("lspconfig").clangd.setup {}
-		require("lspconfig").html.setup {}
-		require("lspconfig").ts_ls.setup {}
-		require("lspconfig").jdtls.setup {}
-		vim.lsp.enable("kotlin_language_server")
+		})
+		vim.lsp.enable("rust_analyzer")
+		vim.lsp.enable("pyright")
+		vim.lsp.enable("clangd")
+		vim.lsp.enable("html")
+		vim.lsp.enable("ts_ls")
+		vim.lsp.enable("jdtls")
 		vim.lsp.config("kotlin_language_server", {
 			cmd = { 'kotlin-language-server' },
 			cmd_env = {
 				JAVA_HOME = '/usr/lib/jvm/java-11-openjdk',
 			},
 		})
+		vim.lsp.enable("kotlin_language_server")
 
 		local cmp = require("cmp");
 		local luasnip = require("luasnip");
